@@ -5,3 +5,5 @@ transcript*.json
 .env
 .hyperframes/
 __pycache__/
+*.mp3
+*.wav
