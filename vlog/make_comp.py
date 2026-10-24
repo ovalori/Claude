@@ -11,7 +11,10 @@ out_dir = sys.argv[2]
 total = timeline["duration"]
 shots = timeline["shots"]
 
-TITLE_SHOT, END_SHOT = 1, len(shots) - 1
+# Title on the first shot after the cold open (shot 1 when there is none).
+song_start = timeline.get("song_start", 0)
+TITLE_SHOT = next(i for i, s in enumerate(shots) if i > 0 and s["at"] >= song_start)
+END_SHOT = len(shots) - 1
 SECTION_HOLD = 2.8
 
 clips, tweens = [], []
@@ -48,7 +51,7 @@ tweens += [
 
 # Date labels at each section start.
 for i, s in enumerate(shots):
-    if not s["section"]:
+    if not s.get("section"):
         continue
     sid = f"sec{i}"
     clips.append(
@@ -64,7 +67,7 @@ for i, s in enumerate(shots):
 CAPTIONS = False
 n = 0
 for s in shots if CAPTIONS else []:
-    for c in s["captions"]:
+    for c in s.get("captions", []):
         dur = round(c["end"] - c["start"], 3)
         if dur <= 0.2:
             continue
