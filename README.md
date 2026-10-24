@@ -38,7 +38,7 @@ npm install -g @anthropic-ai/claude-code
 ## 2. Get your Groq API key (free)
 1. Go to https://console.groq.com/keys and sign in with Google.
 2. Click **Create API Key** and copy it (it starts with `gsk_`).
-3. Save it as an environment variable:
+3. Save it as an environment variable (in a Claude cloud session, add it as a **Network secret** for `api.groq.com` instead):
    - Windows: `setx GROQ_API_KEY "gsk_yourkey"` (then reopen the terminal)
    - Mac: `echo 'export GROQ_API_KEY="gsk_yourkey"' >> ~/.zshrc && source ~/.zshrc`
 
