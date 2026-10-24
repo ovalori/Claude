@@ -4,3 +4,4 @@ renders/
 transcript*.json
 .env
 .hyperframes/
+__pycache__/
