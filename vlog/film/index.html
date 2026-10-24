@@ -37,38 +37,20 @@
     </style>
   </head>
   <body>
-    <div id="root" data-composition-id="main" data-start="0" data-duration="199.8" data-width="1920" data-height="1080">
-      <video id="footage" class="clip" src="assets/vlog_base.mp4" data-start="0" data-duration="199.8" data-track-index="0" data-has-audio="true" playsinline></video>
-      <div id="title" class="card clip" data-start="3.6" data-duration="4.5" data-track-index="1"><div id="title-kicker" class="kicker">North Luzon · Weekend Youth Camp 2026</div><div id="title-big" class="big">Chosen Gen</div></div>
-      <div id="outro" class="card clip" data-start="194.3" data-duration="5.5" data-track-index="1"><div id="outro-kicker" class="kicker">Chosen Gen</div><div id="outro-big" class="big">until next camp ✦</div></div>
-      <div id="sec2" class="section clip" data-start="8.1" data-duration="2.8" data-track-index="2"><span id="sec2-t">April 29 · the night before</span></div>
-      <div id="sec7" class="section clip" data-start="23.1" data-duration="2.8" data-track-index="2"><span id="sec7-t">April 30</span></div>
-      <div id="sec21" class="section clip" data-start="65.1" data-duration="2.8" data-track-index="2"><span id="sec21-t">bonfire night</span></div>
-      <div id="sec27" class="section clip" data-start="110.2" data-duration="2.8" data-track-index="2"><span id="sec27-t">May 1</span></div>
-      <div id="sec32" class="section clip" data-start="125.2" data-duration="2.8" data-track-index="2"><span id="sec32-t">May 2</span></div>
-      <div id="sec47" class="section clip" data-start="178.1" data-duration="2.8" data-track-index="2"><span id="sec47-t">May 3 · last day</span></div>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="230.6" data-width="1920" data-height="1080">
+      <video id="footage" class="clip" src="assets/vlog_base.mp4" data-start="0" data-duration="230.6" data-track-index="0" data-has-audio="true" playsinline></video>
+      <div id="title" class="card clip" data-start="12.6" data-duration="6.571" data-track-index="1"><div id="title-kicker" class="kicker">North Luzon · Weekend Youth Camp 2026</div><div id="title-big" class="big">Chosen Gen</div></div>
+      <div id="outro" class="card clip" data-start="215.659" data-duration="14.941" data-track-index="1"><div id="outro-kicker" class="kicker">Chosen Gen</div><div id="outro-big" class="big">until next camp ✦</div></div>
     </div>
     <script>
       const tl = gsap.timeline({ paused: true });
       const rise = { opacity: 0, y: 40, filter: "blur(8px)" };
       const land = { opacity: 1, y: 0, filter: "blur(0px)", duration: 0.6, ease: "power3.out" };
-      tl.fromTo("#title-kicker", rise, { ...land }, 3.8000000000000003);
-      tl.fromTo("#title-big", rise, { ...land }, 3.95);
-      tl.to(["#title-kicker", "#title-big"], { opacity: 0, duration: 0.4, ease: "power2.in" }, 7.6);
-      tl.fromTo("#outro-kicker", rise, { ...land }, 194.60000000000002);
-      tl.fromTo("#outro-big", rise, { ...land }, 194.75);
-      tl.fromTo("#sec2-t", { opacity: 0, x: -30 }, { opacity: 1, x: 0, duration: 0.45, ease: "power3.out" }, 8.2);
-      tl.to("#sec2-t", { opacity: 0, duration: 0.3, ease: "power2.in" }, 10.549999999999999);
-      tl.fromTo("#sec7-t", { opacity: 0, x: -30 }, { opacity: 1, x: 0, duration: 0.45, ease: "power3.out" }, 23.200000000000003);
-      tl.to("#sec7-t", { opacity: 0, duration: 0.3, ease: "power2.in" }, 25.55);
-      tl.fromTo("#sec21-t", { opacity: 0, x: -30 }, { opacity: 1, x: 0, duration: 0.45, ease: "power3.out" }, 65.19999999999999);
-      tl.to("#sec21-t", { opacity: 0, duration: 0.3, ease: "power2.in" }, 67.55);
-      tl.fromTo("#sec27-t", { opacity: 0, x: -30 }, { opacity: 1, x: 0, duration: 0.45, ease: "power3.out" }, 110.3);
-      tl.to("#sec27-t", { opacity: 0, duration: 0.3, ease: "power2.in" }, 112.65);
-      tl.fromTo("#sec32-t", { opacity: 0, x: -30 }, { opacity: 1, x: 0, duration: 0.45, ease: "power3.out" }, 125.3);
-      tl.to("#sec32-t", { opacity: 0, duration: 0.3, ease: "power2.in" }, 127.65);
-      tl.fromTo("#sec47-t", { opacity: 0, x: -30 }, { opacity: 1, x: 0, duration: 0.45, ease: "power3.out" }, 178.2);
-      tl.to("#sec47-t", { opacity: 0, duration: 0.3, ease: "power2.in" }, 180.55);
+      tl.fromTo("#title-kicker", rise, { ...land }, 12.799999999999999);
+      tl.fromTo("#title-big", rise, { ...land }, 12.95);
+      tl.to(["#title-kicker", "#title-big"], { opacity: 0, duration: 0.4, ease: "power2.in" }, 18.671);
+      tl.fromTo("#outro-kicker", rise, { ...land }, 215.959);
+      tl.fromTo("#outro-big", rise, { ...land }, 216.10899999999998);
       window.__timelines["main"] = tl;
       tl.seek(0);
     </script>
