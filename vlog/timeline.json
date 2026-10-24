@@ -1,0 +1,549 @@
+{
+ "duration": 199.8,
+ "shots": [
+  {
+   "clip": "0189",
+   "at": 0.0,
+   "dur": 3.6,
+   "kind": "t",
+   "section": null,
+   "captions": [
+    {
+     "start": 0.2,
+     "end": 3.1,
+     "text": "Hi guys! Hi to my vlog, guys!"
+    }
+   ]
+  },
+  {
+   "clip": "0183",
+   "at": 3.6,
+   "dur": 4.5,
+   "kind": "m",
+   "section": null,
+   "captions": []
+  },
+  {
+   "clip": "0184",
+   "at": 8.1,
+   "dur": 3.0,
+   "kind": "m",
+   "section": "April 29 · the night before",
+   "captions": []
+  },
+  {
+   "clip": "0185",
+   "at": 11.1,
+   "dur": 3.0,
+   "kind": "m",
+   "section": null,
+   "captions": []
+  },
+  {
+   "clip": "0190",
+   "at": 14.1,
+   "dur": 3.0,
+   "kind": "m",
+   "section": null,
+   "captions": []
+  },
+  {
+   "clip": "0190",
+   "at": 17.1,
+   "dur": 3.0,
+   "kind": "m",
+   "section": null,
+   "captions": []
+  },
+  {
+   "clip": "0183",
+   "at": 20.1,
+   "dur": 3.0,
+   "kind": "m",
+   "section": null,
+   "captions": []
+  },
+  {
+   "clip": "0210",
+   "at": 23.1,
+   "dur": 3.8,
+   "kind": "t",
+   "section": "April 30",
+   "captions": [
+    {
+     "start": 23.1,
+     "end": 26.9,
+     "text": "Hi vlog! Day 1!"
+    }
+   ]
+  },
+  {
+   "clip": "0192",
+   "at": 26.9,
+   "dur": 1.3,
+   "kind": "m",
+   "section": null,
+   "captions": []
+  },
+  {
+   "clip": "0199",
+   "at": 28.2,
+   "dur": 3.0,
+   "kind": "m",
+   "section": null,
+   "captions": []
+  },
+  {
+   "clip": "0203",
+   "at": 31.2,
+   "dur": 3.0,
+   "kind": "m",
+   "section": null,
+   "captions": []
+  },
+  {
+   "clip": "0206",
+   "at": 34.2,
+   "dur": 3.0,
+   "kind": "m",
+   "section": null,
+   "captions": []
+  },
+  {
+   "clip": "0207",
+   "at": 37.2,
+   "dur": 2.5,
+   "kind": "m",
+   "section": null,
+   "captions": []
+  },
+  {
+   "clip": "0211",
+   "at": 39.7,
+   "dur": 4.4,
+   "kind": "t",
+   "section": null,
+   "captions": [
+    {
+     "start": 39.9,
+     "end": 44.1,
+     "text": "Ay, thank you, toothbrush!"
+    }
+   ]
+  },
+  {
+   "clip": "0209",
+   "at": 44.1,
+   "dur": 3.0,
+   "kind": "m",
+   "section": null,
+   "captions": []
+  },
+  {
+   "clip": "0216",
+   "at": 47.1,
+   "dur": 3.0,
+   "kind": "m",
+   "section": null,
+   "captions": []
+  },
+  {
+   "clip": "0217",
+   "at": 50.1,
+   "dur": 3.0,
+   "kind": "m",
+   "section": null,
+   "captions": []
+  },
+  {
+   "clip": "0215",
+   "at": 53.1,
+   "dur": 3.0,
+   "kind": "m",
+   "section": null,
+   "captions": []
+  },
+  {
+   "clip": "0222",
+   "at": 56.1,
+   "dur": 3.0,
+   "kind": "m",
+   "section": null,
+   "captions": []
+  },
+  {
+   "clip": "0224",
+   "at": 59.1,
+   "dur": 3.0,
+   "kind": "m",
+   "section": null,
+   "captions": []
+  },
+  {
+   "clip": "0226",
+   "at": 62.1,
+   "dur": 3.0,
+   "kind": "m",
+   "section": null,
+   "captions": []
+  },
+  {
+   "clip": "0227",
+   "at": 65.1,
+   "dur": 5.2,
+   "kind": "t",
+   "section": "bonfire night",
+   "captions": [
+    {
+     "start": 65.2,
+     "end": 67.5,
+     "text": "Papunta na po kami sa bonfire."
+    },
+    {
+     "start": 67.5,
+     "end": 70.3,
+     "text": "Dorm 1B! See you!"
+    }
+   ]
+  },
+  {
+   "clip": "0227",
+   "at": 70.3,
+   "dur": 3.0,
+   "kind": "m",
+   "section": null,
+   "captions": []
+  },
+  {
+   "clip": "0228",
+   "at": 73.3,
+   "dur": 18.5,
+   "kind": "t",
+   "section": null,
+   "captions": [
+    {
+     "start": 73.3,
+     "end": 76.1,
+     "text": "There are times that I don't feel like living."
+    },
+    {
+     "start": 76.2,
+     "end": 78.5,
+     "text": "Or I feel cold."
+    },
+    {
+     "start": 78.6,
+     "end": 81.2,
+     "text": "Parang nanglalamig ako sa Lord."
+    },
+    {
+     "start": 81.3,
+     "end": 83.3,
+     "text": "But what's good there is,"
+    },
+    {
+     "start": 83.3,
+     "end": 86.8,
+     "text": "pag nalalayo tayo sa Lord at nawawala yung flame natin,"
+    },
+    {
+     "start": 86.9,
+     "end": 91.7,
+     "text": "the solution is to draw the people who have that fire."
+    }
+   ]
+  },
+  {
+   "clip": "0228",
+   "at": 91.8,
+   "dur": 10.4,
+   "kind": "t",
+   "section": null,
+   "captions": [
+    {
+     "start": 92.0,
+     "end": 94.4,
+     "text": "As we're looking at the fire,"
+    },
+    {
+     "start": 94.4,
+     "end": 97.5,
+     "text": "let's be reminded that it is the Holy Spirit living inside of us,"
+    },
+    {
+     "start": 97.5,
+     "end": 102.1,
+     "text": "and that we get to be a fire to each and every one of us."
+    }
+   ]
+  },
+  {
+   "clip": "0229",
+   "at": 102.2,
+   "dur": 5.0,
+   "kind": "m",
+   "section": null,
+   "captions": []
+  },
+  {
+   "clip": "0230",
+   "at": 107.2,
+   "dur": 3.0,
+   "kind": "m",
+   "section": null,
+   "captions": []
+  },
+  {
+   "clip": "0231",
+   "at": 110.2,
+   "dur": 3.0,
+   "kind": "m",
+   "section": "May 1",
+   "captions": []
+  },
+  {
+   "clip": "0233",
+   "at": 113.2,
+   "dur": 3.0,
+   "kind": "m",
+   "section": null,
+   "captions": []
+  },
+  {
+   "clip": "0234",
+   "at": 116.2,
+   "dur": 3.0,
+   "kind": "m",
+   "section": null,
+   "captions": []
+  },
+  {
+   "clip": "0236",
+   "at": 119.2,
+   "dur": 3.0,
+   "kind": "m",
+   "section": null,
+   "captions": []
+  },
+  {
+   "clip": "0237",
+   "at": 122.2,
+   "dur": 3.0,
+   "kind": "m",
+   "section": null,
+   "captions": []
+  },
+  {
+   "clip": "0238",
+   "at": 125.2,
+   "dur": 3.0,
+   "kind": "m",
+   "section": "May 2",
+   "captions": []
+  },
+  {
+   "clip": "0241",
+   "at": 128.2,
+   "dur": 7.8,
+   "kind": "t",
+   "section": null,
+   "captions": [
+    {
+     "start": 128.5,
+     "end": 133.6,
+     "text": "This is me, day 2 of the camp."
+    },
+    {
+     "start": 133.6,
+     "end": 136.0,
+     "text": "Pickleballs!"
+    }
+   ]
+  },
+  {
+   "clip": "0239",
+   "at": 136.0,
+   "dur": 3.0,
+   "kind": "m",
+   "section": null,
+   "captions": []
+  },
+  {
+   "clip": "0240",
+   "at": 139.0,
+   "dur": 3.0,
+   "kind": "m",
+   "section": null,
+   "captions": []
+  },
+  {
+   "clip": "0243",
+   "at": 142.0,
+   "dur": 3.0,
+   "kind": "m",
+   "section": null,
+   "captions": []
+  },
+  {
+   "clip": "0247",
+   "at": 145.0,
+   "dur": 3.0,
+   "kind": "m",
+   "section": null,
+   "captions": []
+  },
+  {
+   "clip": "0248",
+   "at": 148.0,
+   "dur": 3.0,
+   "kind": "m",
+   "section": null,
+   "captions": []
+  },
+  {
+   "clip": "0254",
+   "at": 151.0,
+   "dur": 3.0,
+   "kind": "m",
+   "section": null,
+   "captions": []
+  },
+  {
+   "clip": "0255",
+   "at": 154.0,
+   "dur": 3.5,
+   "kind": "t",
+   "section": null,
+   "captions": [
+    {
+     "start": 154.0,
+     "end": 155.8,
+     "text": "1, 2, 3!"
+    },
+    {
+     "start": 155.8,
+     "end": 157.5,
+     "text": "Hug pose! Open arms!"
+    }
+   ]
+  },
+  {
+   "clip": "0258",
+   "at": 157.5,
+   "dur": 5.6,
+   "kind": "t",
+   "section": null,
+   "captions": [
+    {
+     "start": 157.5,
+     "end": 160.1,
+     "text": "Go, number 40!"
+    },
+    {
+     "start": 160.1,
+     "end": 163.1,
+     "text": "Kumusta? Masaya!"
+    }
+   ]
+  },
+  {
+   "clip": "0263",
+   "at": 163.1,
+   "dur": 3.0,
+   "kind": "m",
+   "section": null,
+   "captions": []
+  },
+  {
+   "clip": "0266",
+   "at": 166.1,
+   "dur": 3.0,
+   "kind": "m",
+   "section": null,
+   "captions": []
+  },
+  {
+   "clip": "0270",
+   "at": 169.1,
+   "dur": 3.0,
+   "kind": "m",
+   "section": null,
+   "captions": []
+  },
+  {
+   "clip": "0272",
+   "at": 172.1,
+   "dur": 3.0,
+   "kind": "m",
+   "section": null,
+   "captions": []
+  },
+  {
+   "clip": "0271",
+   "at": 175.1,
+   "dur": 3.0,
+   "kind": "m",
+   "section": null,
+   "captions": []
+  },
+  {
+   "clip": "0273",
+   "at": 178.1,
+   "dur": 3.0,
+   "kind": "m",
+   "section": "May 3 · last day",
+   "captions": []
+  },
+  {
+   "clip": "0274",
+   "at": 181.1,
+   "dur": 3.0,
+   "kind": "m",
+   "section": null,
+   "captions": []
+  },
+  {
+   "clip": "0274",
+   "at": 184.1,
+   "dur": 3.0,
+   "kind": "m",
+   "section": null,
+   "captions": []
+  },
+  {
+   "clip": "0278",
+   "at": 187.1,
+   "dur": 4.2,
+   "kind": "t",
+   "section": null,
+   "captions": [
+    {
+     "start": 187.1,
+     "end": 190.5,
+     "text": "This is my last day!"
+    },
+    {
+     "start": 190.5,
+     "end": 191.3,
+     "text": "Cheers!"
+    }
+   ]
+  },
+  {
+   "clip": "0278",
+   "at": 191.3,
+   "dur": 3.0,
+   "kind": "m",
+   "section": null,
+   "captions": []
+  },
+  {
+   "clip": "0183",
+   "at": 194.3,
+   "dur": 5.5,
+   "kind": "m",
+   "section": null,
+   "captions": []
+  }
+ ]
+}

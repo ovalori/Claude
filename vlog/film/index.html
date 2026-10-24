@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en" data-resolution="landscape">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1920, height=1080" />
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <style>
+      :root {
+        --ink: #fdf6e3;
+        --accent: #f2c14e;
+        --font-display: "Archivo Black";
+        --font-body: "Outfit";
+      }
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { margin: 0; width: 1920px; height: 1080px; overflow: hidden; background: #000; }
+      #root { position: relative; width: 100%; height: 100%; }
+      #footage { position: absolute; left: 0; top: 0; width: 1920px; height: 1080px; object-fit: cover; }
+      .card {
+        position: absolute; left: 50%; top: 330px; transform: translateX(-50%); width: max-content; max-width: 1536px;
+        padding: 40px 72px 48px; border-radius: 28px; background: rgba(0, 0, 0, 0.5);
+        display: flex; flex-direction: column; align-items: center; text-align: center;
+        color: var(--ink); text-shadow: 0 4px 28px rgba(0, 0, 0, 0.6);
+      }
+      .kicker { font-family: var(--font-body); font-weight: 600; font-size: 38px; letter-spacing: 0.3em; text-transform: uppercase; }
+      .big { font-family: var(--font-display); font-size: 132px; line-height: 1.02; margin-top: 14px; text-wrap: balance; }
+      .section { position: absolute; left: 160px; top: 110px; }
+      .section span {
+        display: inline-block; font-family: var(--font-body); font-weight: 700; font-size: 44px;
+        color: var(--ink); padding: 10px 26px; border-left: 6px solid var(--accent);
+        background: rgba(0, 0, 0, 0.45); letter-spacing: 0.04em;
+      }
+      .caption { position: absolute; left: 192px; top: 860px; width: 1536px; text-align: center; }
+      .caption span {
+        display: inline-block; font-family: var(--font-body); font-weight: 700; font-size: 50px; line-height: 1.25;
+        color: #fff; padding: 8px 22px; border-radius: 12px; background: rgba(0, 0, 0, 0.55);
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="199.8" data-width="1920" data-height="1080">
+      <video id="footage" class="clip" src="assets/vlog_base.mp4" data-start="0" data-duration="199.8" data-track-index="0" data-has-audio="true" playsinline></video>
+      <div id="title" class="card clip" data-start="3.6" data-duration="4.5" data-track-index="1"><div id="title-kicker" class="kicker">North Luzon · Weekend Youth Camp 2026</div><div id="title-big" class="big">Chosen Gen</div></div>
+      <div id="outro" class="card clip" data-start="194.3" data-duration="5.5" data-track-index="1"><div id="outro-kicker" class="kicker">Chosen Gen</div><div id="outro-big" class="big">until next camp ✦</div></div>
+      <div id="sec2" class="section clip" data-start="8.1" data-duration="2.8" data-track-index="2"><span id="sec2-t">April 29 · the night before</span></div>
+      <div id="sec7" class="section clip" data-start="23.1" data-duration="2.8" data-track-index="2"><span id="sec7-t">April 30</span></div>
+      <div id="sec21" class="section clip" data-start="65.1" data-duration="2.8" data-track-index="2"><span id="sec21-t">bonfire night</span></div>
+      <div id="sec27" class="section clip" data-start="110.2" data-duration="2.8" data-track-index="2"><span id="sec27-t">May 1</span></div>
+      <div id="sec32" class="section clip" data-start="125.2" data-duration="2.8" data-track-index="2"><span id="sec32-t">May 2</span></div>
+      <div id="sec47" class="section clip" data-start="178.1" data-duration="2.8" data-track-index="2"><span id="sec47-t">May 3 · last day</span></div>
+      <div id="cap0" class="caption clip" data-start="0.2" data-duration="2.9" data-track-index="3"><span id="cap0-t">Hi guys! Hi to my vlog, guys!</span></div>
+      <div id="cap1" class="caption clip" data-start="23.1" data-duration="3.8" data-track-index="3"><span id="cap1-t">Hi vlog! Day 1!</span></div>
+      <div id="cap2" class="caption clip" data-start="39.9" data-duration="4.2" data-track-index="3"><span id="cap2-t">Ay, thank you, toothbrush!</span></div>
+      <div id="cap3" class="caption clip" data-start="65.2" data-duration="2.3" data-track-index="3"><span id="cap3-t">Papunta na po kami sa bonfire.</span></div>
+      <div id="cap4" class="caption clip" data-start="67.5" data-duration="2.8" data-track-index="3"><span id="cap4-t">Dorm 1B! See you!</span></div>
+      <div id="cap5" class="caption clip" data-start="73.3" data-duration="2.8" data-track-index="3"><span id="cap5-t">There are times that I don&#x27;t feel like living.</span></div>
+      <div id="cap6" class="caption clip" data-start="76.2" data-duration="2.3" data-track-index="3"><span id="cap6-t">Or I feel cold.</span></div>
+      <div id="cap7" class="caption clip" data-start="78.6" data-duration="2.6" data-track-index="3"><span id="cap7-t">Parang nanglalamig ako sa Lord.</span></div>
+      <div id="cap8" class="caption clip" data-start="81.3" data-duration="2.0" data-track-index="3"><span id="cap8-t">But what&#x27;s good there is,</span></div>
+      <div id="cap9" class="caption clip" data-start="83.3" data-duration="3.5" data-track-index="3"><span id="cap9-t">pag nalalayo tayo sa Lord at nawawala yung flame natin,</span></div>
+      <div id="cap10" class="caption clip" data-start="86.9" data-duration="4.8" data-track-index="3"><span id="cap10-t">the solution is to draw the people who have that fire.</span></div>
+      <div id="cap11" class="caption clip" data-start="92.0" data-duration="2.4" data-track-index="3"><span id="cap11-t">As we&#x27;re looking at the fire,</span></div>
+      <div id="cap12" class="caption clip" data-start="94.4" data-duration="3.1" data-track-index="3"><span id="cap12-t">let&#x27;s be reminded that it is the Holy Spirit living inside of us,</span></div>
+      <div id="cap13" class="caption clip" data-start="97.5" data-duration="4.6" data-track-index="3"><span id="cap13-t">and that we get to be a fire to each and every one of us.</span></div>
+      <div id="cap14" class="caption clip" data-start="128.5" data-duration="5.1" data-track-index="3"><span id="cap14-t">This is me, day 2 of the camp.</span></div>
+      <div id="cap15" class="caption clip" data-start="133.6" data-duration="2.4" data-track-index="3"><span id="cap15-t">Pickleballs!</span></div>
+      <div id="cap16" class="caption clip" data-start="154.0" data-duration="1.8" data-track-index="3"><span id="cap16-t">1, 2, 3!</span></div>
+      <div id="cap17" class="caption clip" data-start="155.8" data-duration="1.7" data-track-index="3"><span id="cap17-t">Hug pose! Open arms!</span></div>
+      <div id="cap18" class="caption clip" data-start="157.5" data-duration="2.6" data-track-index="3"><span id="cap18-t">Go, number 40!</span></div>
+      <div id="cap19" class="caption clip" data-start="160.1" data-duration="3.0" data-track-index="3"><span id="cap19-t">Kumusta? Masaya!</span></div>
+      <div id="cap20" class="caption clip" data-start="187.1" data-duration="3.4" data-track-index="3"><span id="cap20-t">This is my last day!</span></div>
+      <div id="cap21" class="caption clip" data-start="190.5" data-duration="0.8" data-track-index="3"><span id="cap21-t">Cheers!</span></div>
+    </div>
+    <script>
+      const tl = gsap.timeline({ paused: true });
+      const rise = { opacity: 0, y: 40, filter: "blur(8px)" };
+      const land = { opacity: 1, y: 0, filter: "blur(0px)", duration: 0.6, ease: "power3.out" };
+      tl.fromTo("#title-kicker", rise, { ...land }, 3.8000000000000003);
+      tl.fromTo("#title-big", rise, { ...land }, 3.95);
+      tl.to(["#title-kicker", "#title-big"], { opacity: 0, duration: 0.4, ease: "power2.in" }, 7.6);
+      tl.fromTo("#outro-kicker", rise, { ...land }, 194.60000000000002);
+      tl.fromTo("#outro-big", rise, { ...land }, 194.75);
+      tl.fromTo("#sec2-t", { opacity: 0, x: -30 }, { opacity: 1, x: 0, duration: 0.45, ease: "power3.out" }, 8.2);
+      tl.to("#sec2-t", { opacity: 0, duration: 0.3, ease: "power2.in" }, 10.549999999999999);
+      tl.fromTo("#sec7-t", { opacity: 0, x: -30 }, { opacity: 1, x: 0, duration: 0.45, ease: "power3.out" }, 23.200000000000003);
+      tl.to("#sec7-t", { opacity: 0, duration: 0.3, ease: "power2.in" }, 25.55);
+      tl.fromTo("#sec21-t", { opacity: 0, x: -30 }, { opacity: 1, x: 0, duration: 0.45, ease: "power3.out" }, 65.19999999999999);
+      tl.to("#sec21-t", { opacity: 0, duration: 0.3, ease: "power2.in" }, 67.55);
+      tl.fromTo("#sec27-t", { opacity: 0, x: -30 }, { opacity: 1, x: 0, duration: 0.45, ease: "power3.out" }, 110.3);
+      tl.to("#sec27-t", { opacity: 0, duration: 0.3, ease: "power2.in" }, 112.65);
+      tl.fromTo("#sec32-t", { opacity: 0, x: -30 }, { opacity: 1, x: 0, duration: 0.45, ease: "power3.out" }, 125.3);
+      tl.to("#sec32-t", { opacity: 0, duration: 0.3, ease: "power2.in" }, 127.65);
+      tl.fromTo("#sec47-t", { opacity: 0, x: -30 }, { opacity: 1, x: 0, duration: 0.45, ease: "power3.out" }, 178.2);
+      tl.to("#sec47-t", { opacity: 0, duration: 0.3, ease: "power2.in" }, 180.55);
+      tl.fromTo("#cap0-t", { opacity: 0, y: 12 }, { opacity: 1, y: 0, duration: 0.2, ease: "power2.out" }, 0.2);
+      tl.fromTo("#cap1-t", { opacity: 0, y: 12 }, { opacity: 1, y: 0, duration: 0.2, ease: "power2.out" }, 23.1);
+      tl.fromTo("#cap2-t", { opacity: 0, y: 12 }, { opacity: 1, y: 0, duration: 0.2, ease: "power2.out" }, 39.9);
+      tl.fromTo("#cap3-t", { opacity: 0, y: 12 }, { opacity: 1, y: 0, duration: 0.2, ease: "power2.out" }, 65.2);
+      tl.fromTo("#cap4-t", { opacity: 0, y: 12 }, { opacity: 1, y: 0, duration: 0.2, ease: "power2.out" }, 67.5);
+      tl.fromTo("#cap5-t", { opacity: 0, y: 12 }, { opacity: 1, y: 0, duration: 0.2, ease: "power2.out" }, 73.3);
+      tl.fromTo("#cap6-t", { opacity: 0, y: 12 }, { opacity: 1, y: 0, duration: 0.2, ease: "power2.out" }, 76.2);
+      tl.fromTo("#cap7-t", { opacity: 0, y: 12 }, { opacity: 1, y: 0, duration: 0.2, ease: "power2.out" }, 78.6);
+      tl.fromTo("#cap8-t", { opacity: 0, y: 12 }, { opacity: 1, y: 0, duration: 0.2, ease: "power2.out" }, 81.3);
+      tl.fromTo("#cap9-t", { opacity: 0, y: 12 }, { opacity: 1, y: 0, duration: 0.2, ease: "power2.out" }, 83.3);
+      tl.fromTo("#cap10-t", { opacity: 0, y: 12 }, { opacity: 1, y: 0, duration: 0.2, ease: "power2.out" }, 86.9);
+      tl.fromTo("#cap11-t", { opacity: 0, y: 12 }, { opacity: 1, y: 0, duration: 0.2, ease: "power2.out" }, 92.0);
+      tl.fromTo("#cap12-t", { opacity: 0, y: 12 }, { opacity: 1, y: 0, duration: 0.2, ease: "power2.out" }, 94.4);
+      tl.fromTo("#cap13-t", { opacity: 0, y: 12 }, { opacity: 1, y: 0, duration: 0.2, ease: "power2.out" }, 97.5);
+      tl.fromTo("#cap14-t", { opacity: 0, y: 12 }, { opacity: 1, y: 0, duration: 0.2, ease: "power2.out" }, 128.5);
+      tl.fromTo("#cap15-t", { opacity: 0, y: 12 }, { opacity: 1, y: 0, duration: 0.2, ease: "power2.out" }, 133.6);
+      tl.fromTo("#cap16-t", { opacity: 0, y: 12 }, { opacity: 1, y: 0, duration: 0.2, ease: "power2.out" }, 154.0);
+      tl.fromTo("#cap17-t", { opacity: 0, y: 12 }, { opacity: 1, y: 0, duration: 0.2, ease: "power2.out" }, 155.8);
+      tl.fromTo("#cap18-t", { opacity: 0, y: 12 }, { opacity: 1, y: 0, duration: 0.2, ease: "power2.out" }, 157.5);
+      tl.fromTo("#cap19-t", { opacity: 0, y: 12 }, { opacity: 1, y: 0, duration: 0.2, ease: "power2.out" }, 160.1);
+      tl.fromTo("#cap20-t", { opacity: 0, y: 12 }, { opacity: 1, y: 0, duration: 0.2, ease: "power2.out" }, 187.1);
+      tl.fromTo("#cap21-t", { opacity: 0, y: 12 }, { opacity: 1, y: 0, duration: 0.2, ease: "power2.out" }, 190.5);
+      window.__timelines["main"] = tl;
+      tl.seek(0);
+    </script>
+  </body>
+</html>
