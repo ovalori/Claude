@@ -60,9 +60,10 @@ for i, s in enumerate(shots):
         f'tl.to("#{sid}-t", {{ opacity: 0, duration: 0.3, ease: "power2.in" }}, {s["at"] + SECTION_HOLD - 0.35});',
     ]
 
-# Captions on the talking shots.
+# Captions on the talking shots (off: the person asked for no subtitles).
+CAPTIONS = False
 n = 0
-for s in shots:
+for s in shots if CAPTIONS else []:
     for c in s["captions"]:
         dur = round(c["end"] - c["start"], 3)
         if dur <= 0.2:
