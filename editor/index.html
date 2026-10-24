@@ -1,15 +1,19 @@
 <!doctype html>
-<html lang="en" data-resolution="portrait">
+<html
+  lang="en"
+  data-resolution="portrait"
+  data-composition-variables='[{"id":"hookKicker","type":"string","label":"Opening small text","default":"weekend youth camp"},{"id":"hookTitle","type":"string","label":"Opening title","default":"day 1 ✦"},{"id":"nightTitle","type":"string","label":"Night title","default":"pagdating ng gabi ✦"},{"id":"outroKicker","type":"string","label":"Ending small text","default":"chosen gen"},{"id":"outroTitle","type":"string","label":"Ending title","default":"until next camp ✦"}]'
+>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=1080, height=1920" />
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
     <style>
-      /* Placeholders: replace all three with the film's own palette and display face. */
       :root {
-        --ground: #6b6b6b;
-        --ink: #ffffff;
-        --font-display: sans-serif;
+        --ink: #fdf6e3;
+        --accent: #f2c14e;
+        --font-display: "Archivo Black";
+        --font-body: "Outfit";
       }
       * {
         margin: 0;
@@ -22,21 +26,46 @@
         width: 1080px;
         height: 1920px;
         overflow: hidden;
-        background: var(--ground);
+        background: #000;
       }
       #root {
+        position: relative;
         width: 100%;
         height: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-family: var(--font-display);
       }
-      #title {
+      #footage {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 1080px;
+        height: 1920px;
+        object-fit: cover;
+      }
+      .card {
+        position: absolute;
+        left: 108px;
+        width: 864px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
         color: var(--ink);
-        font-size: 72px;
+        text-shadow: 0 4px 24px rgba(0, 0, 0, 0.55);
+      }
+      .kicker {
+        font-family: var(--font-body);
         font-weight: 600;
-        letter-spacing: -0.03em;
+        font-size: 34px;
+        letter-spacing: 0.3em;
+        text-transform: uppercase;
+      }
+      .big {
+        font-family: var(--font-display);
+        font-size: 92px;
+        line-height: 1.02;
+        text-wrap: balance;
+        margin-top: 12px;
+        letter-spacing: -0.02em;
       }
     </style>
   </head>
@@ -45,15 +74,50 @@
       id="root"
       data-composition-id="main"
       data-start="0"
-      data-duration="10"
+      data-duration="60.6"
       data-width="1080"
       data-height="1920"
     >
-      <h1 id="title" class="clip" data-start="0" data-duration="10" data-track-index="0">Title</h1>
+      <video
+        id="footage"
+        class="clip"
+        src="assets/base.mp4"
+        data-start="0"
+        data-duration="60.6"
+        data-track-index="0"
+        data-has-audio="true"
+        playsinline
+      ></video>
+
+      <div id="hook" class="card clip" data-start="0" data-duration="2.6" data-track-index="1" style="top: 210px">
+        <div id="hook-kicker" class="kicker" data-var-text="hookKicker">weekend youth camp</div>
+        <div id="hook-big" class="big" data-var-text="hookTitle">day 1 ✦</div>
+      </div>
+
+      <div id="night" class="card clip" data-start="42.4" data-duration="2.4" data-track-index="1" style="top: 260px">
+        <div id="night-big" class="big" data-var-text="nightTitle">pagdating ng gabi ✦</div>
+      </div>
+
+      <div id="outro" class="card clip" data-start="57.2" data-duration="3.4" data-track-index="1" style="top: 210px">
+        <div id="outro-kicker" class="kicker" data-var-text="outroKicker">chosen gen</div>
+        <div id="outro-big" class="big" data-var-text="outroTitle">until next camp ✦</div>
+      </div>
     </div>
     <script>
       const tl = gsap.timeline({ paused: true });
-      // Example: tl.fromTo("#title", { opacity: 0, filter: "blur(8px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.18, ease: "power4.out" }, 0);
+      const rise = { opacity: 0, y: 40, filter: "blur(8px)" };
+      const land = { opacity: 1, y: 0, filter: "blur(0px)", duration: 0.5, ease: "power3.out" };
+
+      tl.fromTo("#hook-kicker", rise, { ...land }, 0.0);
+      tl.fromTo("#hook-big", rise, { ...land }, 0.12);
+      tl.to(["#hook-kicker", "#hook-big"], { opacity: 0, y: -20, duration: 0.3, ease: "power2.in" }, 2.2);
+
+      tl.fromTo("#night-big", rise, { ...land }, 42.5);
+      tl.to("#night-big", { opacity: 0, duration: 0.3, ease: "power2.in" }, 44.4);
+
+      tl.fromTo("#outro-kicker", rise, { ...land }, 57.3);
+      tl.fromTo("#outro-big", rise, { ...land }, 57.45);
+
       window.__timelines["main"] = tl;
       tl.seek(0);
     </script>

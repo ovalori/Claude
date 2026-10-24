@@ -3,3 +3,4 @@ renders/
 *.mp4
 transcript*.json
 .env
+.hyperframes/
