@@ -21,6 +21,8 @@
         display: flex; flex-direction: column; align-items: center; text-align: center;
         color: var(--ink); text-shadow: 0 4px 28px rgba(0, 0, 0, 0.6);
       }
+      .card.on-black { background: none; text-shadow: none; }
+      .card.on-black .kicker { margin-top: 18px; color: var(--accent); }
       .kicker { font-family: var(--font-body); font-weight: 600; font-size: 38px; letter-spacing: 0.3em; text-transform: uppercase; }
       .big { font-family: var(--font-display); font-size: 132px; line-height: 1.02; margin-top: 14px; text-wrap: balance; }
       .section { position: absolute; left: 160px; top: 110px; }
@@ -37,20 +39,20 @@
     </style>
   </head>
   <body>
-    <div id="root" data-composition-id="main" data-start="0" data-duration="230.6" data-width="1920" data-height="1080">
-      <video id="footage" class="clip" src="assets/vlog_base.mp4" data-start="0" data-duration="230.6" data-track-index="0" data-has-audio="true" playsinline></video>
-      <div id="title" class="card clip" data-start="12.6" data-duration="6.571" data-track-index="1"><div id="title-kicker" class="kicker">North Luzon · Weekend Youth Camp 2026</div><div id="title-big" class="big">Chosen Gen</div></div>
-      <div id="outro" class="card clip" data-start="215.659" data-duration="14.941" data-track-index="1"><div id="outro-kicker" class="kicker">Chosen Gen</div><div id="outro-big" class="big">until next camp ✦</div></div>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="271.198" data-width="1920" data-height="1080">
+      <video id="footage" class="clip" src="assets/vlog_base.mp4" data-start="0" data-duration="271.198" data-track-index="0" data-has-audio="true" playsinline></video>
+      <div id="title" class="card clip" data-start="12.605" data-duration="6.571" data-track-index="1"><div id="title-kicker" class="kicker">North Luzon · Weekend Youth Camp 2026</div><div id="title-big" class="big">Chosen Gen</div></div>
+      <div id="outro" class="card on-black clip" data-start="263.145" data-duration="8.053" data-track-index="1"><div id="outro-big" class="big">Chosen Gen</div><div id="outro-kicker" class="kicker">until next camp ✦</div></div>
     </div>
     <script>
       const tl = gsap.timeline({ paused: true });
       const rise = { opacity: 0, y: 40, filter: "blur(8px)" };
       const land = { opacity: 1, y: 0, filter: "blur(0px)", duration: 0.6, ease: "power3.out" };
-      tl.fromTo("#title-kicker", rise, { ...land }, 12.799999999999999);
-      tl.fromTo("#title-big", rise, { ...land }, 12.95);
-      tl.to(["#title-kicker", "#title-big"], { opacity: 0, duration: 0.4, ease: "power2.in" }, 18.671);
-      tl.fromTo("#outro-kicker", rise, { ...land }, 215.959);
-      tl.fromTo("#outro-big", rise, { ...land }, 216.10899999999998);
+      tl.fromTo("#title-kicker", rise, { ...land }, 12.805);
+      tl.fromTo("#title-big", rise, { ...land }, 12.955);
+      tl.to(["#title-kicker", "#title-big"], { opacity: 0, duration: 0.4, ease: "power2.in" }, 18.676000000000002);
+      tl.fromTo("#outro-kicker", rise, { ...land }, 263.445);
+      tl.fromTo("#outro-big", rise, { ...land }, 263.59499999999997);
       window.__timelines["main"] = tl;
       tl.seek(0);
     </script>
