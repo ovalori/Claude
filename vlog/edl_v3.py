@@ -59,19 +59,27 @@ DROP = {
     ("0268", 2.0), ("0270", 7.0), ("0262", 1.0), ("0257", 3.0), ("0274", 150.0),
     ("0248", 160.0), ("0248", 160.6), ("0248", 161.2), ("0248", 161.8),
 }
-# Steadier in-points found within a few seconds of the original moment: (clip, old_in) -> new_in.
-STEADY = {}
+DROP |= {("0192", 0.0), ("0260", 1.0)}  # no steadier window found
+# Steadier in-points found within 8 s of the original moment: (clip, old_in) -> new_in.
+STEADY = {
+    ("0184", 0.5): 4.75, ("0190", 16.0): 14.75, ("0190", 2.0): 0.0, ("0190", 33.0): 30.0,
+    ("0212", 4.0): 2.25, ("0228", 41.0): 49.0, ("0247", 15.0): 17.25, ("0258", 20.0): 21.5,
+    ("0249", 12.0): 16.5, ("0251", 8.0): 14.25, ("0252", 12.0): 20.0, ("0254", 18.0): 24.25,
+    ("0255", 12.0): 4.25, ("0257", 10.0): 4.5, ("0253", 20.0): 12.5, ("0269", 20.0): 17.75,
+    ("0265", 6.0): 4.75, ("0273", 2.0): 1.0, ("0274", 40.0): 36.5,
+}
 
 
 def _clean(shots):
     return [(s[0], STEADY.get((s[0], s[1]), s[1]), *s[2:]) for s in shots if (s[0], s[1]) not in DROP]
 
 
+COLD_OPEN = _clean(COLD_OPEN)
 PART1 = _clean(PART1)
 PART3 = _clean(PART3)
 VOICE_BROLL = [("0228", 25.0, 4.0) if s[:2] == ("0227", 145.0) else s for s in VOICE_BROLL]
 VOICE_BROLL = _clean(VOICE_BROLL)
 
 # The opening logo reads better over the dark night shot than on top of the real banner.
-_a, _b = PART1.index(("0183", 21.5, 8)), PART1.index(("0190", 2.0, 8))
+_a, _b = PART1.index(("0183", 21.5, 8)), PART1.index(("0190", STEADY[("0190", 2.0)], 8))
 PART1[_a], PART1[_b] = PART1[_b], PART1[_a]
