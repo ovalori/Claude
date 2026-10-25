@@ -51,3 +51,23 @@ PART3 = SONG[_games:_last] + [
     ("0274", 10.0, 4),
     ("0274", 150.0, 4),
 ] + SONG[_last:]
+
+# Clean-up pass: drop shots that show feet, backs, lens-blocking hands or blur, and the stutter.
+DROP = {
+    ("0211", 16.0), ("0218", 5.0), ("0223", 4.0), ("0225", 22.0),
+    ("0231", 8.0), ("0235", 10.0), ("0238", 7.0), ("0256", 3.0), ("0265", 1.0),
+    ("0268", 2.0), ("0270", 7.0), ("0262", 1.0), ("0257", 3.0), ("0274", 150.0),
+    ("0248", 160.0), ("0248", 160.6), ("0248", 161.2), ("0248", 161.8),
+}
+# Steadier in-points found within a few seconds of the original moment: (clip, old_in) -> new_in.
+STEADY = {}
+
+
+def _clean(shots):
+    return [(s[0], STEADY.get((s[0], s[1]), s[1]), *s[2:]) for s in shots if (s[0], s[1]) not in DROP]
+
+
+PART1 = _clean(PART1)
+PART3 = _clean(PART3)
+VOICE_BROLL = [("0228", 25.0, 4.0) if s[:2] == ("0227", 145.0) else s for s in VOICE_BROLL]
+VOICE_BROLL = _clean(VOICE_BROLL)
