@@ -9,7 +9,18 @@ import sys
 timeline = json.load(open(sys.argv[1]))
 out_dir = sys.argv[2]
 total = timeline["duration"]
-shots = timeline["shots"]
+if "card_at" in timeline:
+    # v3: parts instead of one shot list. Title on part 1's first shot, closing card on black.
+    p1 = next(p for p in timeline["parts"] if p["part"] == "part1")
+    shots = [
+        {"at": 0.0, "dur": timeline["song_start"]},
+        {"at": p1["at"], "dur": round(p1["shots"][0]["dur"], 3)},
+        {"at": timeline["card_at"], "dur": timeline["card_dur"]},
+    ]
+    OUTRO = ("until next camp ✦", "Chosen Gen", " on-black")
+else:
+    shots = timeline["shots"]
+    OUTRO = ("Chosen Gen", "until next camp ✦", "")
 
 # Title on the first shot after the cold open (shot 1 when there is none).
 song_start = timeline.get("song_start", 0)
@@ -40,9 +51,9 @@ tweens += [
 # Closing card over the last banner shot.
 e = shots[END_SHOT]
 clips.append(
-    f'<div id="outro" class="card clip" data-start="{e["at"]}" data-duration="{round(total - e["at"], 3)}" data-track-index="1">'
-    f'<div id="outro-kicker" class="kicker">Chosen Gen</div>'
-    f'<div id="outro-big" class="big">until next camp ✦</div></div>'
+    f'<div id="outro" class="card{OUTRO[2]} clip" data-start="{e["at"]}" data-duration="{round(total - e["at"], 3)}" data-track-index="1">'
+    f'<div id="outro-big" class="big">{OUTRO[1]}</div>'
+    f'<div id="outro-kicker" class="kicker">{OUTRO[0]}</div></div>'
 )
 tweens += [
     f'tl.fromTo("#outro-kicker", rise, {{ ...land }}, {e["at"] + 0.3});',
@@ -104,6 +115,8 @@ page = f"""<!doctype html>
         display: flex; flex-direction: column; align-items: center; text-align: center;
         color: var(--ink); text-shadow: 0 4px 28px rgba(0, 0, 0, 0.6);
       }}
+      .card.on-black {{ background: none; text-shadow: none; }}
+      .card.on-black .kicker {{ margin-top: 18px; color: var(--accent); }}
       .kicker {{ font-family: var(--font-body); font-weight: 600; font-size: 38px; letter-spacing: 0.3em; text-transform: uppercase; }}
       .big {{ font-family: var(--font-display); font-size: 132px; line-height: 1.02; margin-top: 14px; text-wrap: balance; }}
       .section {{ position: absolute; left: 160px; top: 110px; }}
