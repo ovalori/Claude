@@ -4,6 +4,7 @@ Usage: python3 -I vlog/make_comp.py <timeline.json> <project_dir>
 """
 import html
 import json
+import os
 import sys
 
 timeline = json.load(open(sys.argv[1]))
@@ -35,30 +36,53 @@ def esc(s):
     return html.escape(s, quote=True)
 
 
-# Opening title over the banner shot.
+# Opening title over the banner shot: the camp logo when assets/logo.png exists, else text.
+LOGO = os.path.exists(os.path.join(out_dir, "assets", "logo.png"))
 t = shots[TITLE_SHOT]
-clips.append(
+if LOGO:
+    clips.append(
+        f'<div id="title" class="logo-card clip" data-start="{t["at"]}" data-duration="{t["dur"]}" data-track-index="1">'
+        f'<img id="title-logo" class="logo" src="assets/logo.png" alt="Chosen Gen" /></div>'
+    )
+    tweens += [
+        f'tl.fromTo("#title-logo", {{ opacity: 0, scale: 0.92, filter: "blur(6px)" }}, '
+        f'{{ opacity: 1, scale: 1, filter: "blur(0px)", duration: 0.7, ease: "power3.out" }}, {t["at"] + 0.2});',
+        f'tl.to("#title-logo", {{ opacity: 0, duration: 0.4, ease: "power2.in" }}, {t["at"] + t["dur"] - 0.5});',
+    ]
+else:
+    clips.append(
     f'<div id="title" class="card clip" data-start="{t["at"]}" data-duration="{t["dur"]}" data-track-index="1">'
-    f'<div id="title-kicker" class="kicker">North Luzon · Weekend Youth Camp 2026</div>'
-    f'<div id="title-big" class="big">Chosen Gen</div></div>'
-)
-tweens += [
-    f'tl.fromTo("#title-kicker", rise, {{ ...land }}, {t["at"] + 0.2});',
-    f'tl.fromTo("#title-big", rise, {{ ...land }}, {t["at"] + 0.35});',
-    f'tl.to(["#title-kicker", "#title-big"], {{ opacity: 0, duration: 0.4, ease: "power2.in" }}, {t["at"] + t["dur"] - 0.5});',
-]
+        f'<div id="title-kicker" class="kicker">North Luzon · Weekend Youth Camp 2026</div>'
+        f'<div id="title-big" class="big">Chosen Gen</div></div>'
+    )
+    tweens += [
+        f'tl.fromTo("#title-kicker", rise, {{ ...land }}, {t["at"] + 0.2});',
+        f'tl.fromTo("#title-big", rise, {{ ...land }}, {t["at"] + 0.35});',
+        f'tl.to(["#title-kicker", "#title-big"], {{ opacity: 0, duration: 0.4, ease: "power2.in" }}, {t["at"] + t["dur"] - 0.5});',
+    ]
 
 # Closing card over the last banner shot.
 e = shots[END_SHOT]
-clips.append(
+if LOGO and OUTRO[2]:
+    clips.append(
+        f'<div id="outro" class="logo-card on-black clip" data-start="{e["at"]}" data-duration="{round(total - e["at"], 3)}" data-track-index="1">'
+        f'<img id="outro-logo" class="logo" src="assets/logo.png" alt="Chosen Gen" />'
+        f'<div id="outro-kicker" class="kicker">{OUTRO[0]}</div></div>'
+    )
+    tweens += [
+        f'tl.fromTo("#outro-logo", {{ opacity: 0, scale: 0.94 }}, {{ opacity: 1, scale: 1, duration: 0.9, ease: "power3.out" }}, {e["at"] + 0.3});',
+        f'tl.fromTo("#outro-kicker", rise, {{ ...land }}, {e["at"] + 0.9});',
+    ]
+else:
+    clips.append(
     f'<div id="outro" class="card{OUTRO[2]} clip" data-start="{e["at"]}" data-duration="{round(total - e["at"], 3)}" data-track-index="1">'
-    f'<div id="outro-big" class="big">{OUTRO[1]}</div>'
-    f'<div id="outro-kicker" class="kicker">{OUTRO[0]}</div></div>'
-)
-tweens += [
-    f'tl.fromTo("#outro-kicker", rise, {{ ...land }}, {e["at"] + 0.3});',
-    f'tl.fromTo("#outro-big", rise, {{ ...land }}, {e["at"] + 0.45});',
-]
+        f'<div id="outro-big" class="big">{OUTRO[1]}</div>'
+        f'<div id="outro-kicker" class="kicker">{OUTRO[0]}</div></div>'
+    )
+    tweens += [
+        f'tl.fromTo("#outro-kicker", rise, {{ ...land }}, {e["at"] + 0.3});',
+        f'tl.fromTo("#outro-big", rise, {{ ...land }}, {e["at"] + 0.45});',
+    ]
 
 # Date labels at each section start.
 for i, s in enumerate(shots):
@@ -115,6 +139,13 @@ page = f"""<!doctype html>
         display: flex; flex-direction: column; align-items: center; text-align: center;
         color: var(--ink); text-shadow: 0 4px 28px rgba(0, 0, 0, 0.6);
       }}
+      .logo-card {{
+        position: absolute; left: 0; top: 0; width: 1920px; height: 1080px;
+        display: flex; flex-direction: column; align-items: center; justify-content: center;
+      }}
+      .logo {{ width: 760px; height: auto; filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.45)); }}
+      .logo-card.on-black .logo {{ width: 820px; filter: none; }}
+      .logo-card .kicker {{ margin-top: 34px; color: var(--accent); }}
       .card.on-black {{ background: none; text-shadow: none; }}
       .card.on-black .kicker {{ margin-top: 18px; color: var(--accent); }}
       .kicker {{ font-family: var(--font-body); font-weight: 600; font-size: 38px; letter-spacing: 0.3em; text-transform: uppercase; }}

@@ -71,3 +71,7 @@ PART1 = _clean(PART1)
 PART3 = _clean(PART3)
 VOICE_BROLL = [("0228", 25.0, 4.0) if s[:2] == ("0227", 145.0) else s for s in VOICE_BROLL]
 VOICE_BROLL = _clean(VOICE_BROLL)
+
+# The opening logo reads better over the dark night shot than on top of the real banner.
+_a, _b = PART1.index(("0183", 21.5, 8)), PART1.index(("0190", 2.0, 8))
+PART1[_a], PART1[_b] = PART1[_b], PART1[_a]
