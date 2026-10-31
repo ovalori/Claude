@@ -32,7 +32,7 @@ SEGMENTS = [
         ("0216", 0.0, 4),
         ("0224", 14.0, 4),
         ("0226", 81.4, 6.8, "t"),      # "Anong masasabi mo sa experience…?" "Masaya po!"
-        ("0226", 131.0, 4),
+        ("0220", 14.0, 4),
         ("0227", 4.9, 5.2, "t"),       # "Papunta na po kami sa bonfire. Dorm 1B!"
      ], 2.5, True),
     ("voice",
@@ -71,7 +71,7 @@ SEGMENTS = [
         ("0254", 24.0, 4),
         ("0263", 3.0, 4),
         ("0271", 14.0, 4),
-        ("0271", 37.0, 4),
+        ("0272", 7.0, 4),
      ], 2.5, False),
     ("nat", ("0278", 0.0, 4.2)),       # "This is my last day! Cheers!"
     ("voice",
