@@ -46,10 +46,10 @@
     </style>
   </head>
   <body>
-    <div id="root" data-composition-id="main" data-start="0" data-duration="162.127" data-width="1920" data-height="1080">
-      <video id="footage" class="clip" src="assets/vlog_base.mp4" data-start="0" data-duration="162.127" data-track-index="0" data-has-audio="true" playsinline></video>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="189.715" data-width="1920" data-height="1080">
+      <video id="footage" class="clip" src="assets/vlog_base.mp4" data-start="0" data-duration="189.715" data-track-index="0" data-has-audio="true" playsinline></video>
       <div id="title" class="logo-card clip" data-start="14.77" data-duration="6.571" data-track-index="1"><img id="title-logo" class="logo" src="assets/logo.png" alt="Chosen Gen" /></div>
-      <div id="outro" class="logo-card on-black clip" data-start="156.106" data-duration="6.021" data-track-index="1"><img id="outro-logo" class="logo" src="assets/logo.png" alt="Chosen Gen" /><div id="outro-kicker" class="kicker">until next camp ✦</div></div>
+      <div id="outro" class="logo-card on-black clip" data-start="183.194" data-duration="6.521" data-track-index="1"><img id="outro-logo" class="logo" src="assets/logo.png" alt="Chosen Gen" /><div id="outro-kicker" class="kicker">until next camp ✦</div></div>
     </div>
     <script>
       const tl = gsap.timeline({ paused: true });
@@ -57,8 +57,8 @@
       const land = { opacity: 1, y: 0, filter: "blur(0px)", duration: 0.6, ease: "power3.out" };
       tl.fromTo("#title-logo", { opacity: 0, scale: 0.92, filter: "blur(6px)" }, { opacity: 1, scale: 1, filter: "blur(0px)", duration: 0.7, ease: "power3.out" }, 14.969999999999999);
       tl.to("#title-logo", { opacity: 0, duration: 0.4, ease: "power2.in" }, 20.841);
-      tl.fromTo("#outro-logo", { opacity: 0, scale: 0.94 }, { opacity: 1, scale: 1, duration: 0.9, ease: "power3.out" }, 156.406);
-      tl.fromTo("#outro-kicker", rise, { ...land }, 157.006);
+      tl.fromTo("#outro-logo", { opacity: 0, scale: 0.94 }, { opacity: 1, scale: 1, duration: 0.9, ease: "power3.out" }, 183.494);
+      tl.fromTo("#outro-kicker", rise, { ...land }, 184.094);
       window.__timelines["main"] = tl;
       tl.seek(0);
     </script>
