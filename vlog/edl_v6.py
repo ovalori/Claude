@@ -44,8 +44,8 @@ SEGMENTS = [
      # "…we didn't earn our place" / "God chose us before the foundation of the world" /
      # "His choice is rooted in love and not on our performance" / "kahit anong gawin natin…" /
      # "Mahal ka ng Panginoon. At inibig ka niya."
-     [("0230", 10.0, 4.5), ("0236", 140.0, 4.0), ("0233", 31.0, 4.0), ("0234", 10.0, 3.5),
-      ("0236", 494.0, 4.0), ("0235", 35.0, 3.5), ("0237", 59.0, 4.0), ("0231", 2.0, 1.0)],
+     [("0230", 10.0, 4.5), ("0236", 140.0, 4.0), ("0212", 2.25, 4.0), ("0233", 31.0, 3.5),
+      ("0213", 6.0, 3.5), ("0237", 59.0, 3.5), ("0245", 5.0, 4.0), ("0264", 4.0, 1.0)],
      False, False),
     ("song", 205, [
         ("0241", 6.5, 7.8, "t"),       # "This is me, day 2 of the camp. Pickleballs!"
